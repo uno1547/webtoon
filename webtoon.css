@@ -16,19 +16,64 @@ li{
 }
 div.head{
     height: 55px;
-    width: 960px;
+    width: 980px;
     margin: auto;
 }
+div.menu{
+    border-top: 1px solid #f2f2f2;
+    border-bottom:1px solid #e5e5e5;
+
+}
+div.submenu{
+    border-bottom: 1px solid #ededed;
+    background: #fafafa;
+}
+.submenu li{
+    padding: 10px 15px;
+    color: #434343;
+}
+ul{
+    margin: auto;
+}
+li{
+    padding: 13px 15px;
+}
 ul.menu{
+    width: 960px;
     font-size: 14px;
-    !border: red 1px solid;
+    
 }
 ul.submenu{
-
+    width: 960px;
+    font-size: 12px;
+    color: #434343;
 }
 ul.category_tab{
-
+    width: 980px;
+    margin: 10px auto 0;
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid #e5e5e5;
 }
-div{
-    margin: 0;
+a{
+    display: inline-block;
+}
+a.naver{
+    width: 53px;
+    height: 10px;
+    margin-top: 17px;
+    margin-right:5px ;
+}
+a.webtoon{
+    height: 21px;
+    font-size: 23px;
+}
+a.webnovel{
+    color: #434343;
+    margin-right: 30px;
+}
+input{
+    width: 320px;
+    height: 27px;
+    border:1px solid #e5e5e5;
 }
