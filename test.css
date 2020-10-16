@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    font-weight: bold;
+    font-family: Arial, '나눔고딕', NanumGothic, -apple-system,
+    BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
+}
+
+ul {
+    padding: 0;
+    margin:0;
+}
+
+li{
+    display: inline-block;
+    list-style-type: none;
+    padding: 15px;
+}
+div.head{
+    height: 55px;
+    width: 980px;
+    margin: auto;
+}
+div.menu{
+    border-top: 1px solid #f2f2f2;
+    border-bottom:1px solid #e5e5e5;
+}
+
+ul.menu {
+  font-size: 14px;
+  display: inline-block;
+}
+
+ul.menu li.selected {
+  background-color: #00d564;
+  color: #FFF;
+}
+
+div.menu .right-banner {
+  float: right;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 42px;
+}
+
+div.menu-inner {
+  width: 960px;
+  margin: auto;
+}
+
+div.submenu {
+    border-bottom: 1px solid #ededed;
+    background: #fafafa;
+}
+
+.submenu li{
+    padding: 10px 0px;
+    margin-right: 32px;
+    color: #434343;
+}
+ul{
+    margin: auto;
+}
+li{
+    padding: 13px 15px;
+}
+
+ul.submenu{
+    width: 960px;
+    font-size: 12px;
+    color: #434343;
+}
+ul.category_tab{
+    width: 980px;
+    margin: 10px auto 0;
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid #e5e5e5;
+}
+a{
+    display: inline-block;
+}
+a.naver{
+    width: 53px;
+    height: 10px;
+    margin-top: 17px;
+    margin-right:5px ;
+}
+a.webtoon{
+    height: 21px;
+    font-size: 23px;
+}
+a.webnovel{
+    color: #434343;
+    margin-right: 30px;
+}
+input{
+    width: 320px;
+    height: 27px;
+    border:1px solid #e5e5e5;
+}
