@@ -4,7 +4,7 @@ body {
     font-family: Arial,'나눔고딕',NanumGothic,-apple-system,
     BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
 }
-
+/*카테고리 세줄*/
 ul {
     padding: 0; 
     margin: auto;
@@ -22,7 +22,7 @@ div.head {
     margin: auto;
 }
 
-a {
+a {/*이런거 밑에 버튼a에 영향줄수도있을듯*/
     display: inline-block;
 }
 
@@ -145,6 +145,86 @@ ul.category_tab {
     font-size: 12px;
     font-weight: normal;
 }
+
+.buttons {
+    height: 60px;
+    position: relative;
+    top: 42px;
+}
+
+.buttons * {
+    position: absolute;
+}
+
+.buttons a {
+    text-align: center;
+    width: 25px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 26px;
+    font-weight: bold;
+    border: 1px solid black ;
+    border-radius: 3px;
+}
+
+.first {
+    left: 4px;
+}
+
+.previous {
+    left: 33px;
+}
+
+.next {
+    left: 59px;
+}
+
+.last {
+    left: 88px;
+}
+
+.buttons .page-num{
+    width: 31px;
+    height: 18px;
+    top: 32px;
+    left: 10px;
+    text-align: center;
+}
+
+.buttons span {
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.buttons .slash{
+    top: 35px;
+    left: 51px;
+}
+
+.buttons .total {
+    top: 34px;
+    left: 59px;
+}
+
+.buttons .go {
+    width: 32px;
+    height: 20px;
+    top:30px;
+    left: 77px;
+    line-height: 21px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.buttons2 {
+    height: 50px;
+    position: relative;
+    top: 44px;
+    background-color:#f8f8f8 ;
+    border-top: 1px solid #e2e3e3;
+}
+
+
 
 /*.button {
     display: inline-block;
