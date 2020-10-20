@@ -1,10 +1,11 @@
 body {
     margin: 0;
+    !margin-left: 8px;
     font-weight: bold;
     font-family: Arial,'나눔고딕',NanumGothic,-apple-system,
     BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
 }
-/*카테고리 세줄*/
+/*카테고리 세줄 comicinfo 부분에가로로표시*/
 ul {
     padding: 0; 
     margin: auto;
@@ -105,7 +106,70 @@ ul.category_tab {
     font-weight: normal;
     border-bottom: 1px solid #e5e5e5;
 }
+/*웹툰 썸네일하고 제목라인포지션기준부모태그??*/
+/*.page-container {여기 부터 다시해보기
+    width: 960px;
+    margin: auto;
+}*/
+.webtoon-info {
+    !border: solid 1px black;/*이거하면 선으로 보임*/
+    width: 960px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+}
 
+.webtoon-info img {
+    position: absolute;
+}
+
+.webtoon-info .detail {
+    position: absolute;
+    width: 727px;
+    left: 234px;
+}
+
+.detail h2 {
+    display: inline-block;
+    font-size: 18px;
+    margin:  0 8px 0 0;
+}
+
+.detail p {
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 18px;
+    color: #666;
+    margin-bottom: 6px;
+}
+
+.detail span {
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 8px;
+}
+
+.detail ul {
+    margin-top: 11px;
+
+}
+
+.detail ul li {
+    font-size: 12px;
+    padding: 8px 11px;
+    margin:0 -3px;
+    border:1px solid #b8b8b8;
+}
+/*.detail .middle-span {
+    line-height: 0px;
+}*/
+
+.title-area {
+    margin: auto;
+    border: red 1px solid;
+}
+
+/*리모컨*/
 .remote {
     display: grid;
     /*!grid-template-columns: 2fr 1fr;가로*/
@@ -113,12 +177,14 @@ ul.category_tab {
     width: 120px;
     height: 185px;
     float: right;
-    border: #afafaf solid 1px
+    border: #e5e5e5 solid 1px;
+    border-radius: 3px;
 }
 
 .remote-head {
     position: relative;
     border: #e5e5e5 solid 1px;
+    border-radius: 3px;
     padding-top: 8px;
     text-align: center;
     font-size: 12px;
