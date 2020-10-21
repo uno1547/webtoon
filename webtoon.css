@@ -106,69 +106,259 @@ ul.category_tab {
     font-weight: normal;
     border-bottom: 1px solid #e5e5e5;
 }
+.category_tab li {
+    padding-right: 0;
+}
 /*웹툰 썸네일하고 제목라인포지션기준부모태그??*/
 /*.page-container {여기 부터 다시해보기
     width: 960px;
     margin: auto;
 }*/
-.webtoon-info {
-    !border: solid 1px black;/*이거하면 선으로 보임*/
-    width: 960px;
+
+.page-container {
+    width: 980px;
     margin: auto;
+    border: solid 1px red;
+}
+.webtoon-info {
     position: relative;
-    top: 20px;
+    top:20px;
+    left: 9px;
 }
 
-.webtoon-info img {
-    position: absolute;
+.webtoon-info .thumbnail {
+    display: inline-block;/*position ab 으로 나란히된다면 굳이필요없을듯*/
 }
 
 .webtoon-info .detail {
-    position: absolute;
-    width: 727px;
-    left: 234px;
+    !position: absolute;
+    !top: 0px;
+    !left: 234px;
+    width: 730px;
+    float: right;
+    margin-right:12px;
+    !border: solid 1px blue;
+    font-weight: normal;
 }
 
 .detail h2 {
-    display: inline-block;
     font-size: 18px;
-    margin:  0 8px 0 0;
+    margin: 0;
+}
+
+.detail span  {
+    font-weight: normal;
+    font-size: 12px;
+    margin-right: 6px;
+}
+
+.detail .middle-span {
+    font-size: 12px;
+    margin-left: 8px;
 }
 
 .detail p {
     font-size: 12px;
-    font-weight: normal;
     line-height: 18px;
     color: #666;
     margin-bottom: 6px;
 }
 
-.detail span {
+.detail ul li{
+    border: #b8b8b8 1px solid;
+    font-weight: bold;
     font-size: 12px;
+    margin-top: 10px;
+    margin-right: -6px;
+    padding: 9px 11px;
+}
+
+.title-area {
+    border-bottom: 1px solid #e5e5e5;
+    width: 960px;
+    border-top: 2px solid #b7b7b7;
+    margin: auto;
+    margin-top: 83px;
+}
+
+.title-area .view {
+    background-color: #fafafa;
+    border-bottom: 1px solid #f2f2f2;
+    height: 26px;
+    padding: 12px 0 0 14px;
+}
+
+.view h3 {
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+}
+.view div {
+    float: right;
+    font-size: 11px;
     font-weight: normal;
+    margin-right: 15px;
+}
+
+.title-area .vote_lst {
+    position: relative;
+}
+
+.rate {
+    margin-left: 0;
+    display: inline-block;
+    width: 500px;/*처음부터 틀만드는것같음*/
+}
+
+.rate img {
+    /*margin: 10px 14px;*/
+    margin-right: 5px;
+    margin:13px;
+    vertical-align: middle;/*별점주기부분img는 margin0줘야함*/
+}
+
+.rate .star {
+    display: inline-block;
+    width: 95px;
+    height: 30px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/sp_star.gif) no-repeat 0 -140px;
+    margin-top: 3px;
+}
+
+.rate span {
+    font-weight: normal;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.rate .score {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: tahoma,Helvetica,Sans-serif;
+    margin-left: 5px;
+    color: #606060;
+}
+
+.rate .partic-num {
+    color: #8b8b8b;
+    line-height: 28px;
+}
+
+.rate .give-star {
+    margin: 13px 5px;
+}
+
+.partic-num .bar {
+    display: inline-block;
+    width: 5px;
+    height: 25px;
+    margin-left: 2px;
+    margin-right: 3px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/detail/bg_bar.gif) no-repeat 100% 3px;
+}
+
+.rate .star-rate {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 15px;
+    border: 1px solid #cbcbcb;
+}
+
+.star-rate img {
+    margin-top: 1px;
+    margin-left: 4px;
+    margin-right: 0px;
+}
+
+.star-rate span {
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #fff url(https://ssl.pstatic.net/static/comic/images/migration/common/arrow_down_gy_1.gif) no-repeat 1px 1px;
+}
+
+.rate .set {
+    border: 1px solid #d9d9d9;
+    font-size: 11px;
+    padding: 2px 3px;
+}
+
+.right-tab {
+    font-size: 11px;
+    font-weight: normal;
+    float: right;
+    margin: 11px;
+    margin-right: 0px;
+    color: #767676;
+}
+
+.right-bar span {
+    display: inline-block;
+    width: 10px;
+    height: 19px;
+    vertical-align: middle;
+    margin-left: 5px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/detail/bg_bar.gif) no-repeat 3px 1px;
+}
+.copy-address {
+    color: black;
+    padding: 4px;
+    border: 1px solid #d9d9d9;
+    margin-right: 7px;
+}
+
+.remote-on {
+    color: white;
+    padding: 5px;
+    background: #2cb300;
+}
+
+/*.right-tab {
+    display: inline-block;
+    width: 250px;
+    height: 25px;
+    margin: 3px;
+    border: solid 1px blue;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+*/
+/*.rate {
+    position: relative;
+}
+.rate .star {
+    display: inline-block;
+    width: 95px;
+    height: 30px;
+    background: url(https://ssl.pstatic.net/static/comic/images/migration/common/sp_star.gif) no-repeat 0 -140px;
+    !border: solid 1px green;
+    margin-top: 7px;
+}
+
+.rate span {
+    font-weight: normal;
+    font-size: 15px;
+    color: #8b8b8b;
+    font-size: 12px;
+    line-height: 0px;
+    vertical-align: middle;
+}
+
+.rate img {
+    display: inline-block;
+    margin-bottom: 9px;
     margin-right: 8px;
 }
 
-.detail ul {
-    margin-top: 11px;
-
+.rate .episode-score {
+    vertical-align: middle;
 }
-
-.detail ul li {
-    font-size: 12px;
-    padding: 8px 11px;
-    margin:0 -3px;
-    border:1px solid #b8b8b8;
-}
-/*.detail .middle-span {
-    line-height: 0px;
-}*/
-
-.title-area {
-    margin: auto;
-    border: red 1px solid;
-}
-
+*/
 /*리모컨*/
 .remote {
     display: grid;
