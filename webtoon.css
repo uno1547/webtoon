@@ -317,6 +317,22 @@ ul.category_tab {
     background: #2cb300;
 }
 
+.webtoon-view {
+    padding-top: 10px;
+}
+.webtoon-view img {
+    display: block;
+    margin: auto;
+}
+/*.webtoon-view {
+    text-align: center;얘네 display inline이라 화면 크기 커지면 깨짐
+}*/
+
+.outimg {
+    display:block;
+    margin: auto;
+
+}
 /*.right-tab {
     display: inline-block;
     width: 250px;
@@ -360,6 +376,8 @@ ul.category_tab {
 }
 */
 /*리모컨*/
+
+
 .remote {
     display: grid;
     /*!grid-template-columns: 2fr 1fr;가로*/
