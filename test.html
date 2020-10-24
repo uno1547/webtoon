@@ -1,126 +1,30 @@
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <style>
-      .dragging {
-        display: inline-block;
-        width: 300px;
-        height: 300px;
-        background-color:aquamarine;
-        border-radius: 20px;
-        position: fixed;
-        top: 0px;
-        left: 0px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="dragging">
-    </div>
-    <script>
-      const dragElem = document.querySelector(".dragging")
-      let curLocation = null
-      dragElem.addEventListener("mousedown", (evt) => {
-        console.log("Mouse Down")
-        curLocation = {
-          x: evt.pageX,//마우스좌표
-          y: evt.pageY
-        }
-        console.log(curLocation.x)
-        console.log(curLocation.y)
-        const rect = dragElem.getBoundingClientRect()
-        leftPx = rect.left //박스의좌표값
-        topPx = rect.top
-        console.log(leftPx, topPx)
-      })
-      
-      dragElem.addEventListener("mousemove", (evt) => {
-        if (curLocation !== null) {
-          const newLocation = {
-            x: evt.pageX,//움직이는 마우스좌표 
-            y: evt.pageY
-          }
-          const deltaX = newLocation.x - curLocation.x
-          const deltaY = newLocation.y - curLocation.y
-          if (leftPx) {//박스x값이 0이아닐때 
-            dragElem.style.left = leftPx + deltaX +'px' 
-            leftPx + deltaX
-            console.log(dragElem.style.left)
-          }
-          else
-            dragElem.style.left = `${deltaX}px`//박스x좌표 변화없을때 
-
-          if (topPx) {
-            dragElem.style.top = `${topPx + deltaY}px`
-          }
-          else
-            dragElem.style.top = `${deltaY}px`
-        }
-      })
-      dragElem.addEventListener("mouseup", (evt) => {
-        console.log("Mouse up")
-        curLocation = null
-      })
-
-    </script>
-  </body>
-</html>
--->
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel = 'stylesheet' href = 'test.css'>
+  <script src = "test.js"></script>
+  <link rel="stylesheet" href="test.css">
 </head>
 <body>
-    <div class = 'head'>
-        <a class = "naver">NAVER</a>
-        <a class = 'webtoon'>만화</a>
-        <span style="margin-right: 3px;">|</span>
-        <a class = 'webnovel'>웹소설</a>
-        <input>
-    </div>
-    
-    <div class = 'menu'>
-      <div class = "menu-inner">
-        <ul class='menu'>
-          <li>홈</li>
-          <li class="selected">웹툰</li>
-          <li>베스트 도전</li>
-          <li>도전만화</li>
-          <li>마이페이지</li>
-          <li>단행본 만화</li>
-          <li>장르소설</li>
-        </ul>
-        <span class="right-banner">본격 최애 남주 뺏기 <남자주인공의 여자사람친구입니다></span>
-      </div>
-    </div>
-    <div class='submenu'>
-        <ul class='submenu'>
-            <li>요일별</li>
-            <li>장르별</li>
-            <li>작품별</li>
-            <li>작가별</li>
-            <li>연도별</li>
-            <li>테마웹툰</li>
-            <li>완결웹툰</li>
-        </ul>
-    </div>
+  <div onclick = "makeimg()">make img</div>
+  <div onclick = 'makebutton()' class = "makebutton">make button</div>
+  <div onclick = "gethtml()">add pagesource by innerhtml</div>
+  <div onclick = 'getwholehtml()'>add pagesource at consolewindow</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+  <div>7</div>
+  <div>8</div>
+  <div>9</div>
+  <p class = "page-source"></p>
+  <div class = 'divtg'>hi</div>
+  <div class = 'divtg2'></div>
+  <div class = "grandma">
+    <div class = "mom">
+      <div class = "son">
 
-    <div class="page-container">
-      <div class="category_tab">
-        <ul class='category_tab'>
-          <li>요일전체</li>
-          <li>월요웹툰</li>
-          <li>화요웹툰</li>
-          <li>수요웹툰</li>
-          <li>목요웹툰</li>
-          <li>금요웹툰</li>
-          <li>토요웹툰</li>
-          <li>일요웹툰</li>
-        </ul>
       </div>
     </div>
+  </div>
 
 </body>
 </html>
