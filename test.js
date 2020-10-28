@@ -67,3 +67,26 @@ dragelement.addEventListener("mousemove", (evt)=> {
 dragelement.addEventListener("mouseup", (evt)=> {
     curLocation = null
 })
+const height = window.innerHeight
+const width = window.innerWidth
+document.querySelector(".width").innerHTML = "가로" + width
+document.querySelector(".height").innerHTML = "세로" + height
+console.log(width)
+console.log(height)
+if(height<1000&&height>500) {
+    document.querySelector(".result").innerHTML = "500<높이<1000입니다"
+
+}else if(height<500) {
+    document.querySelector(".result").innerHTML = "높이<500입니다"
+}
+if(width)
+/*1.fool screen w:3440 h:1361 가로 세로
+2.w:2300 h:900보다 작아지면 
+3.750* 750 보다 작아지면 없애기
+1.height 만 down 
+2.width 만 down
+3.width height 둘다 down 
+height 가보장되면 오른쪽 가운데 height가 작아지면 오른쪽 아래로 박힘 
+1.innerHeight만따지면 700px아래서부턴 오른쪽 구석 height 만 300px까지 간다면 오른쪽 구석
+2.innerwidth만따지면 1000px이상에서는 오른쪽 가장자리 975px 부터 사라짐 
+*/

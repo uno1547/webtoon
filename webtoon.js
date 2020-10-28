@@ -130,6 +130,7 @@ function remote_switch() {
 const remotebtn = document.querySelector("#remote");
 remotebtn.addEventListener("click", remote_switch);
 const remote = document.querySelector(".remote")
+ 
 let curLocation = null
 let leftPx = remote.style.left
 let topPx = remote.style.top
@@ -142,8 +143,7 @@ remote.addEventListener("mousedown", (evt)=> {
     leftPx = rect.left
     topPx = rect.top
 })
-
-remote.addEventListener("mousemove", (evt)=> {
+document.addEventListener("mousemove", (evt)=> {//remote에다가 달면 마우스가 벗어났을때 mousemove가 인식이안됨
     if(curLocation !== null) {
         const newLocation = {
             x : evt.pageX,
@@ -151,7 +151,7 @@ remote.addEventListener("mousemove", (evt)=> {
         }
         const deltaX = newLocation.x - curLocation.x
         const deltaY = newLocation.y - curLocation.y
-
+ 
         if(leftPx) {
             remote.style.left = `${leftPx + deltaX}px`
         }
@@ -166,8 +166,10 @@ remote.addEventListener("mousemove", (evt)=> {
         }
     }
 })
-remote.addEventListener("mouseup", (evt)=> {
+document.addEventListener("mouseup", (evt)=> {
     curLocation = null
 })
+ 
+
 
 
