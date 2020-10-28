@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    !margin-left: 8px;
+    position: relative;
+    user-select: none;
     font-weight: bold;
     font-family: Arial,'나눔고딕',NanumGothic,-apple-system,
     BlinkMacSystemFont,'Apple SD Gothic Neo','맑은고딕',MalgunGothic,'돋움',Dotum,Sans-serif;
@@ -130,13 +131,9 @@ ul.category_tab {
 }
 
 .webtoon-info .detail {
-    !position: absolute;
-    !top: 0px;
-    !left: 234px;
     width: 730px;
     float: right;
     margin-right:12px;
-    !border: solid 1px blue;
     font-weight: normal;
 }
 
@@ -290,7 +287,7 @@ ul.category_tab {
     font-size: 11px;
     font-weight: normal;
     float: right;
-    margin: 11px;
+    margin: 8px;
     margin-right: 0px;
     color: #767676;
 }
@@ -310,14 +307,27 @@ ul.category_tab {
     margin-right: 7px;
 }
 
-.remote-on {
+#remote {
+    display: inline-block;
+    font-size: 1px;
+    text-align: center;
+    width: 49px;
+}
+.off-now {
+    border: solid 1px #d9d9d9;
+    padding: 5px;
+    background: #fff;
+}
+
+.on-now {
+    border: solid 1px #3fa30c;
     color: white;
     padding: 5px;
     background: #2cb300;
 }
 
 .webtoon-view {
-    padding-top: 10px;
+    padding-top: 50px;
 }
 .webtoon-view img {
     display: block;
@@ -378,7 +388,11 @@ ul.category_tab {
 
 
 .remote {
-    display: grid;
+    display: none;
+    position: fixed;
+    top: 533px; 
+    left: 1710px;
+    cursor: move;
     /*!grid-template-columns: 2fr 1fr;가로*/
     grid-template-rows: 30px 2fr;/*세로*/
     width: 120px;
@@ -409,6 +423,7 @@ ul.category_tab {
 
 .remote-body {
     position: relative;
+    background-color: #fff;
 }
 
 .title {
@@ -422,6 +437,7 @@ ul.category_tab {
 .buttons {
     height: 60px;
     position: relative;
+    background: #fff;
     top: 42px;
 }
 

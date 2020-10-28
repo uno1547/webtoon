@@ -109,3 +109,65 @@ function loghtml() {
     const html = document.querySelector('html').innerHTML;
     console.log(html);
 }
+
+function alerthi(){
+    alert('hi');
+}
+function remote_switch() {
+    const remote = document.querySelector(".remote");
+    if(this.className == "off-now"){
+        this.className = 'on-now'
+        this.innerHTML ='리모컨ON'
+        remote.style.display = 'grid'
+    }
+    else{
+        this.className = 'off-now'
+        this.innerHTML = '리모컨OFF'
+        remote.style.display = 'none'
+    }
+
+}
+const remotebtn = document.querySelector("#remote");
+remotebtn.addEventListener("click", remote_switch);
+const remote = document.querySelector(".remote")
+let curLocation = null
+let leftPx = remote.style.left
+let topPx = remote.style.top
+remote.addEventListener("mousedown", (evt)=> {
+    curLocation = {
+        x : evt.pageX,
+        y : evt.pageY
+    }
+    const rect = remote.getBoundingClientRect()
+    leftPx = rect.left
+    topPx = rect.top
+})
+
+remote.addEventListener("mousemove", (evt)=> {
+    if(curLocation !== null) {
+        const newLocation = {
+            x : evt.pageX,
+            y : evt.pageY
+        }
+        const deltaX = newLocation.x - curLocation.x
+        const deltaY = newLocation.y - curLocation.y
+
+        if(leftPx) {
+            remote.style.left = `${leftPx + deltaX}px`
+        }
+        else{
+            remote.style.left = `${deltaX}px`
+        }
+        if(topPx) {
+            remote.style.top = `${topPx + deltaY}px`
+        }
+        else{
+            remote.style.top = `${deltaY}px`
+        }
+    }
+})
+remote.addEventListener("mouseup", (evt)=> {
+    curLocation = null
+})
+
+

@@ -2,7 +2,6 @@
 <html>
 <head>
     <link rel = 'stylesheet' href = 'webtoon.css'>
-    <script src = "webtoon.js"></script>
 </head>
 <body>
     <div class = 'head'>
@@ -91,13 +90,13 @@
                 <div class = "right-tab">
                     <span>등록일</span>
                     <span class = "right-bar">2019.11.10<span></span></span>
-                    <span class = "copy-address" onclick="loghtml()">주소복사</span>
-                    <span class = "remote-on">리모컨ON</span>
+                    <span class = "copy-address">주소복사</span>
+                    <span  id = 'remote' class = "off-now">리모컨OFF</span>
                 </div><!--등록일주소복사-->
             </div>
         </div>
     </div>
-    <div class = "webtoon-view" onclick = "makeimg()">
+    <div class = "webtoon-view">
         <img src="https://image-comic.pstatic.net/static/agerate/age_15_white.jpg">
         <img src="https://image-comic.pstatic.net/webtoon/733766/1/20191110233329_8c2cd76feedff6f6801d0e207e7ec0d9_IMAG01_1.jpg">
         <img src="https://image-comic.pstatic.net/webtoon/733766/1/20191110233329_8c2cd76feedff6f6801d0e207e7ec0d9_IMAG01_2.jpg">
@@ -219,4 +218,5 @@
         </div>
     </div>
 </body>
+<script src = "webtoon.js"></script>
 </html>
