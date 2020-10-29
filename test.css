@@ -32,3 +32,11 @@
     height: 300px;
     background-color: green ;
 }
+
+.top{
+    background: url(https://ssl.pstatic.net/static/comic/images/sp_remote.png) no-repeat 9px -120px;
+    padding-top: 14px;
+    font-size: 11px;
+    color: red;
+
+}

@@ -172,7 +172,25 @@ document.addEventListener("mouseup", (evt)=> {
 const halfheight = (window.innerHeight)/2
 remote.style.top = (halfheight-150)+"px"
 
- 
+const buttons2_a = document.querySelectorAll(".buttons2 a")
+//console.log(buttons2_a)
+for(i = 0; i < 3;i++){
+    buttons2_a[i].addEventListener("mouseenter", function() {
+        this.style.textDecoration = "underline"
+    })
+    buttons2_a[i].addEventListener("mouseout", function() {
+        this.style.textDecoration = "none"
+    })
+}
+
+const top_area = document.querySelector("div.head")
+const last_cut = document.querySelector("#last")
+buttons2_a[0].addEventListener("click", function(){
+    top_area.scrollIntoView()
+})
+buttons2_a[1].addEventListener("click", function(){
+    last_cut.scrollIntoView()
+}) 
 
 
 

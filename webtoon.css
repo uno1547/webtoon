@@ -511,6 +511,32 @@ ul.category_tab {
     top: 44px;
     background-color:#f8f8f8 ;
     border-top: 1px solid #e2e3e3;
+    text-align: center;
+}
+
+.buttons2 a {
+    padding-top: 14px;
+    font-weight: normal;
+    margin-top: 13px;
+    font-size: 11px;
+    color: #767676;
+    letter-spacing: 0px;
+    display: inline-block;
+    background-image: url(https://ssl.pstatic.net/static/comic/images/sp_remote.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.top {
+    background-position: 9px -120px;
+}
+
+.bottom {
+    background-position:-22px -120px;
+}
+
+.list {
+    background-position: -55px -121px;
 }
 
 
