@@ -169,6 +169,9 @@ document.addEventListener("mousemove", (evt)=> {//remote에다가 달면 마우�
 document.addEventListener("mouseup", (evt)=> {
     curLocation = null
 })
+const halfheight = (window.innerHeight)/2
+remote.style.top = (halfheight-150)+"px"
+
  
 
 

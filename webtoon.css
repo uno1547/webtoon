@@ -391,7 +391,7 @@ ul.category_tab {
     display: grid;
     position: fixed;
     top: 450px;
-    right: 0px;
+    right: 100px;
     cursor: move;
     /*!grid-template-columns: 2fr 1fr;가로*/
     grid-template-rows: 30px 2fr;/*세로*/

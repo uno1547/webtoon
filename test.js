@@ -73,14 +73,20 @@ document.querySelector(".width").innerHTML = "가로" + width
 document.querySelector(".height").innerHTML = "세로" + height
 console.log(width)
 console.log(height)
-if(height<1000&&height>500) {
+const halfheight = height/2
+const halfwidth = width/2
+console.log(halfheight)
+console.log(halfwidth)
+dragelement.style.top = (halfheight-150)+"px"
+dragelement.style.right = "100px"
+/*if(height<1000&&height>500) {
     document.querySelector(".result").innerHTML = "500<높이<1000입니다"
 
 }else if(height<500) {
     document.querySelector(".result").innerHTML = "높이<500입니다"
 }
-if(width)
-/*1.fool screen w:3440 h:1361 가로 세로
+//if(width)
+1.fool screen w:3440 h:1361 가로 세로
 2.w:2300 h:900보다 작아지면 
 3.750* 750 보다 작아지면 없애기
 1.height 만 down 
