@@ -5,6 +5,9 @@
     background: blue;
     position: relative;
 }
+body{
+    margin:0;
+}
 
 .mom div{
     width: 100px;
@@ -39,4 +42,13 @@
     font-size: 11px;
     color: red;
 
+}
+            
+.red {
+    width: 400px;
+    height: 400px;
+    background-color: red;
+    position: fixed;
+    right: 0px;
+    top: 0px;
 }

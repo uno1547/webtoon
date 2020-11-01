@@ -132,63 +132,124 @@ remotebtn.addEventListener("click", remote_switch);
 const remote = document.querySelector(".remote")
  
 let curLocation = null
-let leftPx = remote.style.left
-let topPx = remote.style.top
+//let leftPx = remote.style.left
+//let topPx = remote.style.top
 remote.addEventListener("mousedown", (evt)=> {
-    curLocation = {
+    curLocation = {//클 시에 현재 마우스 위치(좌표)
         x : evt.pageX,
         y : evt.pageY
     }
     const rect = remote.getBoundingClientRect()
-    leftPx = rect.left
-    topPx = rect.top
-})
+    Xcor = rect.left
+    Ycor = rect.top
+})                   
 document.addEventListener("mousemove", (evt)=> {//remote에다가 달면 마우스가 벗어났을때 mousemove가 인식이안됨
     if(curLocation !== null) {
         const newLocation = {
             x : evt.pageX,
             y : evt.pageY
         }
+        console.log(Xcor)
+        console.log(Ycor)
+        /*let deltaX = newLocation.x - curLocation.x
+        let deltaY = newLocation.y - curLocation.y
+        const leftPx = remote.style.left
+        const rightPx = remote.style.right
+        const topPx = remote.style.top
+        const bottomPx = remote.style.bottom
+        const intLeft = parseInt(leftPx.replace("px", ""))
+        const intRight = parseInt(rightPx.replace("px", ""))
+        const intTop = parseInt(topPx.replace("px", ""))
+        const intBottom = parseInt(bottomPx.replace("px", ""))
+        */
         const deltaX = newLocation.x - curLocation.x
         const deltaY = newLocation.y - curLocation.y
- 
-        if(leftPx) {
-            remote.style.left = `${leftPx + deltaX}px`
+        if (Xcor != null) {
+            console.log(Xcor)
+            remote.style.left = `${Xcor + deltaX}px`
         }
-        else{
+        /*else{
             remote.style.left = `${deltaX}px`
+        }*/
+        if (Ycor != null) {
+            console.log(Ycor)
+            remote.style.top = `${Ycor + deltaY}px`
         }
-        if(topPx) {
-            remote.style.top = `${topPx + deltaY}px`
-        }
-        else{
+        /*else{
             remote.style.top = `${deltaY}px`
+        }*/
+        /*if(Xcor) {
+            if(intLeft <= 0) {//왼쪽에접
+                if(deltaX < 0) {
+                    remote.style.left = "0px"
+                }else if(deltaX > 0) {
+                    remote.style.left = `${Xcor + deltaX}px`
+                }
+            }else if(intRight <= 0) {
+                if(deltaX > 0) {
+                    remote.style.right = "0px"
+                }else{
+                    remote.style.left = `${Xcor + deltaX}px`
+                }
+            }else{
+                remote.style.left = `${Xcor + deltaX}px`
+            }
+            if((intLeft != 0) && (intRight != 0)) { //가운데에있을경우
+                remote.style.left = `${Xcor + deltaX}px`
+            } else if ((intLeft <= 0) && (deltaX < 0)) { //왼쪽에 붙고 delta음수
+                remote.style.left = "0px"
+            } else if ((intRight <= 0 ) && (deltaX > 0)) { //오른쪽에 붙고 delta양수
+                remote.style.right = "0px"
+            } else if ((intLeft >= 0) && (deltaX > 0)) { // 왼쪽에 붙고 delta양수
+                remote.style.left = `${Xcor + deltaX}px`
+            } else if ((intRight >= 0)) { //오른쪽에 붙고 delta음수
+                remote.style.right = `${rightPx + deltaX}px`
+            }
+            console.log('thisisleftX')
+            console.log(remote.style.left)
         }
+        if(Ycor) {
+            if((remote.style.top != "0px") && (remote.style.bottom != "0px")) {
+                remote.style.top = `${Ycor + deltaY}px`
+            } else if ((remote.style.top <= "0px") && (deltaY > 0)) {
+                remote.style.top = "0px"
+            } else if ((remote.style.bottom <= "0px") && (deltaY < 0)) {
+                remote.style.bottom = "0px"
+            }
+            console.log('thisisYcor')
+            console.log(remote.style.top)
+        }
+        */
     }
 })
-document.addEventListener("mouseup", (evt)=> {
+//만약 위에붙어서 toppx=0 인동시에 deltay 가 양수면 deltay 0으로 초기화
+document.addEventListener("mouseup", (evt) => {
+    curLocation = null
+})
+
+document.querySelector("body").addEventListener("mouseleave", (evt) => {
     curLocation = null
 })
 const halfheight = (window.innerHeight)/2
 remote.style.top = (halfheight-150)+"px"
 
-const buttons2_a = document.querySelectorAll(".buttons2 a")
-//console.log(buttons2_a)
+const remoteButtons = document.querySelectorAll(".buttons2 a")
+//console.log(remoteButtons)
 for(i = 0; i < 3;i++){
-    buttons2_a[i].addEventListener("mouseenter", function() {
+    remoteButtons[i].addEventListener("mouseenter", function() {
         this.style.textDecoration = "underline"
     })
-    buttons2_a[i].addEventListener("mouseout", function() {
+    remoteButtons[i].addEventListener("mouseout", function() {
         this.style.textDecoration = "none"
     })
 }
 
 const top_area = document.querySelector("div.head")
 const last_cut = document.querySelector("#last")
-buttons2_a[0].addEventListener("click", function(){
+remoteButtons[0].addEventListener("click", function(){
     top_area.scrollIntoView()
 })
-buttons2_a[1].addEventListener("click", function(){
+remoteButtons[1].addEventListener("click", function(){
     last_cut.scrollIntoView()
 }) 
 

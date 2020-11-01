@@ -40,7 +40,7 @@ dragelement.addEventListener("mousedown", (evt)=> {
     topPx = rect.top
 })
 
-dragelement.addEventListener("mousemove", (evt)=> {
+document.addEventListener("mousemove", (evt)=> {
     if(curLocation !== null) {
         const newLocation = {
             x : evt.pageX,
@@ -52,19 +52,17 @@ dragelement.addEventListener("mousemove", (evt)=> {
         if(leftPx) {
             dragelement.style.left = `${leftPx + deltaX}px`
         }
-        else{
-            dragelement.style.left = `${deltaX}px`
-        }
         if(topPx) {
             dragelement.style.top = `${topPx + deltaY}px`
         }
-        else{
-            dragelement.style.top = `${deltaX}px`
-        }
+        console.log(dragelement.style.left)
+        console.log(dragelement.style.right)
+        console.log(dragelement.style.top)
+        console.log(dragelement.style.bottom)
     }    
 })
 
-dragelement.addEventListener("mouseup", (evt)=> {
+document.addEventListener("mouseup", (evt)=> {
     curLocation = null
 })
 const height = window.innerHeight
@@ -96,3 +94,6 @@ height 가보장되면 오른쪽 가운데 height가 작아지면 오른쪽 아�
 1.innerHeight만따지면 700px아래서부턴 오른쪽 구석 height 만 300px까지 간다면 오른쪽 구석
 2.innerwidth만따지면 1000px이상에서는 오른쪽 가장자리 975px 부터 사라짐 
 */
+const red = document.querySelector(".red")
+console.log(red.style.left)
+console.log(red.style.right)
