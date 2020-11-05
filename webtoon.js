@@ -132,6 +132,10 @@ remotebtn.addEventListener("click", remote_switch);
 const remote = document.querySelector(".remote")
  
 let curLocation = null
+let xCoor = 0
+let yCoor = 0
+let remoteWidth = 0
+let remoteHeight = 0
 //let leftPx = remote.style.left
 //let topPx = remote.style.top
 remote.addEventListener("mousedown", (evt)=> {
@@ -140,44 +144,42 @@ remote.addEventListener("mousedown", (evt)=> {
         y : evt.pageY
     }
     const rect = remote.getBoundingClientRect()
-    Xcor = rect.left
-    Ycor = rect.top
-})                   
+    xCoor = rect.left
+    yCoor = rect.top
+    remoteWidth = rect.width
+    remoteHeight = rect.height
+ })                   
+
 document.addEventListener("mousemove", (evt)=> {//remote에다가 달면 마우스가 벗어났을때 mousemove가 인식이안됨
     if(curLocation !== null) {
         const newLocation = {
             x : evt.pageX,
             y : evt.pageY
         }
-        console.log(Xcor)
-        console.log(Ycor)
-        /*let deltaX = newLocation.x - curLocation.x
-        let deltaY = newLocation.y - curLocation.y
-        const leftPx = remote.style.left
-        const rightPx = remote.style.right
-        const topPx = remote.style.top
-        const bottomPx = remote.style.bottom
-        const intLeft = parseInt(leftPx.replace("px", ""))
-        const intRight = parseInt(rightPx.replace("px", ""))
-        const intTop = parseInt(topPx.replace("px", ""))
-        const intBottom = parseInt(bottomPx.replace("px", ""))
-        */
         const deltaX = newLocation.x - curLocation.x
         const deltaY = newLocation.y - curLocation.y
-        if (Xcor != null) {
-            console.log(Xcor)
-            remote.style.left = `${Xcor + deltaX}px`
+        const bodyWidth = document.body
+        const exceptScrollBar = document.querySelector('html').clientWidth
+        const x = xCoor ? xCoor : 0 //xCoor 이 0이아닐때 x = xCoor 그대로 0이면 x = 0 ex)xCoor
+        const y = yCoor ? yCoor : 0 //yCoor 이 0이아닐때 y = yCoor 0이면 y = 0
+
+        remote.style.left = `${x + deltaX}px` //xcor = 0이고 deltax <0 일때 -px가져야하는거아닌가 밑에꺼에 억제되는건가
+        remote.style.top = `${y + deltaY}px`
+
+        if (x + deltaX <= 0) {// 처음위치 + 변위 = 나중위치 
+            remote.style.left = "0px" 
         }
-        /*else{
-            remote.style.left = `${deltaX}px`
-        }*/
-        if (Ycor != null) {
-            console.log(Ycor)
-            remote.style.top = `${Ycor + deltaY}px`
+        if (x + deltaX >= exceptScrollBar - remoteWidth) {
+            remote.style.left = (exceptScrollBar - remoteWidth) + "px"
         }
-        /*else{
-            remote.style.top = `${deltaY}px`
-        }*/
+        if (y + deltaY <= 0) {
+            remote.style.top = "0px"
+        }
+        if (y + deltaY >= window.innerHeight - remoteHeight) {
+            remote.style.top = (window.innerHeight - remoteHeight) + "px" 
+        }
+        
+        
         /*if(Xcor) {
             if(intLeft <= 0) {//왼쪽에접
                 if(deltaX < 0) {
@@ -227,9 +229,6 @@ document.addEventListener("mouseup", (evt) => {
     curLocation = null
 })
 
-document.querySelector("body").addEventListener("mouseleave", (evt) => {
-    curLocation = null
-})
 const halfheight = (window.innerHeight)/2
 remote.style.top = (halfheight-150)+"px"
 
