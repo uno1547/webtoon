@@ -413,12 +413,13 @@ ul.category_tab {
     background-color:#fafafa;
 }
 
-.remote-head .X {
+.remote-head .remote-close {
     position: absolute;
     top: 7px;
     right: 7px;
     font-size: 14px;
     font-weight: normal;
+    cursor: pointer;
 }
 
 .remote-body {
@@ -552,4 +553,3 @@ ul.category_tab {
     text-align: center;
     padding-top: 10px;
 }*/
-

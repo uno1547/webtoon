@@ -98,39 +98,22 @@ function makeimg() {
      "https://image-comic.pstatic.net/webtoon/733766/1/20191110233329_8c2cd76feedff6f6801d0e207e7ec0d9_IMAG01_93.jpg",
      "https://image-comic.pstatic.net/webtoon/733766/1/20191110233329_8c2cd76feedff6f6801d0e207e7ec0d9_IMAG01_94.jpg",
     ]
-    const divtag = document.querySelector(".webtoon-view");
+    const divtag = document.querySelector(".webtoon-view")
     for(i=0;i<links.length;i++){
-        const img = document.createElement("img");
-        img.src = links[i];
-        divtag.appendChild(img);
+        const img = document.createElement("img")
+        img.src = links[i]
+        divtag.appendChild(img)
     }
 }
 function loghtml() {
-    const html = document.querySelector('html').innerHTML;
-    console.log(html);
+    const html = document.querySelector('html').innerHTML
+    console.log(html)
 }
 
 function alerthi(){
-    alert('hi');
+    alert('hi')
 }
-function remote_switch() {
-    const remote = document.querySelector(".remote");
-    if(this.className == "off-now"){
-        this.className = 'on-now'
-        this.innerHTML ='리모컨ON'
-        remote.style.display = 'grid'
-    }
-    else{
-        this.className = 'off-now'
-        this.innerHTML = '리모컨OFF'
-        remote.style.display = 'none'
-    }
-
-}
-const remotebtn = document.querySelector("#remote");
-remotebtn.addEventListener("click", remote_switch);
 const remote = document.querySelector(".remote")
- 
 let curLocation = null
 let xCoor = 0
 let yCoor = 0
@@ -251,6 +234,24 @@ remoteButtons[0].addEventListener("click", function(){
 remoteButtons[1].addEventListener("click", function(){
     last_cut.scrollIntoView()
 }) 
+
+function remoteSwitch() {
+    const remote = document.querySelector(".remote");
+    if(remoteBtn.className == "off-now"){
+        remoteBtn.className = 'on-now'
+        remoteBtn.innerHTML ='리모컨ON'
+        remote.style.display = 'grid'
+    }
+    else{
+        remoteBtn.className = 'off-now'
+        remoteBtn.innerHTML = '리모컨OFF'
+        remote.style.display = 'none'
+    }
+}
+const remoteBtn = document.querySelector("#remote")
+remoteBtn.addEventListener("click", remoteSwitch)
+const remoteClose = document.querySelector(".remote .remote-close")
+remoteClose.addEventListener("click", remoteSwitch)
 
 
 
