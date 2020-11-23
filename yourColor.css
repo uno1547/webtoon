@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+h1 {
+    margin: 130px 0px;
+    font-size: 60px;
+    
+}
+
+.input-area {
+    position: relative;
+    height: 300px;
+    width: 1800px;
+    margin: auto;
+}
+.input-area div {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+}
+.pallete {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 40px;
+    height: 40px;
+}
+#first {
+    top: 28px;
+    left: 810px;
+}
+#second {
+    top: 28px;
+    left: 1184px;
+}
+#third {
+    top:200px;
+    left: 1011px;
+}
+.input-color1 {
+    top: 30px;
+    left: 580px;
+}
+.sum {
+    top: 30px;
+    left: 880px;
+}
+.input-color2 {
+    top: 30px;
+    left: 950px;
+
+}
+.input-color3 {
+    top: 200px;
+    left: 730px;
+}
+.down {
+    position: absolute;
+    height: 73px;
+    width: 73px;
+    top: 100px;
+    left: 850px;
+    
+}
+input {
+    vertical-align: middle;
+    height: 25px;
+    width: 110px;
+}
+::placeholder {
+    color: rgb(199, 183, 183);
+}
+
+

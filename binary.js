@@ -32,7 +32,7 @@ function factorial (n) {
 }
 console.log(factorial(5))
 console.log(factorial(1))
-console.log(factorial(3))
+console.log(factorial(3) )
 
 function binarySearch2(numberList, target) {
     const listLength = numberList.length
@@ -134,3 +134,7 @@ console.log(binarySearchRecursive(list_d, 4))
 console.log(binarySearchRecursive(list_d, 6))
 console.log(binarySearchRecursive(list_d, 8))
 console.log(binarySearchRecursive(list_d, 10))
+
+function getColor (targetColor) {
+    
+}
