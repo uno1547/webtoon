@@ -71,4 +71,9 @@ input {
     color: rgb(199, 183, 183);
 }
 
-
+.grad div {
+    width: 200px;
+    height: 10px;
+    border: black solid 1px;
+    margin: auto;
+}
