@@ -213,7 +213,7 @@ document.addEventListener("mouseup", (evt) => {
 })
 
 const halfheight = (window.innerHeight)/2
-remote.style.top = (halfheight-150)+"px"
+remote.style.top = (halfheight-150) + "px"
 
 const remoteButtons = document.querySelectorAll(".buttons2 a")
 //console.log(remoteButtons)

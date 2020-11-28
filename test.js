@@ -98,50 +98,56 @@
 // console.log(red.style.left)
 // console.log(red.style.right)
 //1
-var a = 3
-function asdf() {
-    a++
+// var a = 3
+// function asdf() {
+//     a++
     
-}
-asdf()
-console.log(a)//4
-//2
-var a = 3
-function asdf() {
-    let a = 5
-}
-asdf()
-console.log(a)//함수안 a는 밖에서 못봄 밖에있는 '3'은 보임 asdf() > 함수스코프에 a = 5선언 > console.log(a)현재스코프상에 a = '3' > '3'
-//3
-var a
-console.log(a)//undefined 선언만되고 값은아직없는 115번째줄 a undefined
-function asdf() {
-    let a = 5 
-}
-asdf()// 함수스코프내에 a = 5선언 
-console.log(a)//undefined 현재스코프상에있는 115번째 a undefined
-//4
-console.log(a)//not defined
-function asdf() {
-    let a = 5
-}
-asdf() //함수스코프내에 125번째줄 a = 5선언 
-console.log(a)//not defined 현재 스코프상에 없는 a not defined
-//5
-function asdf() {
-    var i = 0
-    for (i = 0; i < 10; ++i) {
-        const b = 3
-    }
-    console.log(b)//?? asdf()호출해야 뭔가 결과가 나오는거아닌가요 이대로면 undefined?? 호출한다면 not defined
-}
-//6
-let a = 3
-function b() {
-    a = 6
-    let a = 5
-}
-b()
-console.log(a)
+// }
+// asdf()
+// console.log(a)//4
+// //2
+// var a = 3
+// function asdf() {
+//     let a = 5
+// }
+// asdf()
+// console.log(a)//함수안 a는 밖에서 못봄 밖에있는 '3'은 보임 asdf() > 함수스코프에 a = 5선언 > console.log(a)현재스코프상에 a = '3' > '3'
+// //3
+// var a
+// console.log(a)//undefined 선언만되고 값은아직없는 115번째줄 a undefined
+// function asdf() {
+//     let a = 5 
+// }
+// asdf()// 함수스코프내에 a = 5선언 
+// console.log(a)//undefined 현재스코프상에있는 115번째 a undefined
+// //4
+// console.log(a)//not defined
+// function asdf() {
+//     let a = 5
+// }
+// asdf() //함수스코프내에 125번째줄 a = 5선언 
+// console.log(a)//not defined 현재 스코프상에 없는 a not defined
+// //5
+// function asdf() {
+//     var i = 0
+//     for (i = 0; i < 10; ++i) {
+//         const b = 3
+//     }
+//     console.log(b)//?? asdf()호출해야 뭔가 결과가 나오는거아닌가요 이대로면 undefined?? 호출한다면 not defined
+// }
+// //6
+// let a = 3
+// function b() {
+//     a = 6
+//     let a = 5
+// }
+// b()
+// console.log(a)
 // 코드실행순서 위에서 아래로 그리고 함수선언은 일단선언하고 호출됬을때 다시 돌아옴
 // ++는 변수대상 
+document.addEventListener("click", function() {
+    const scope = 'hi'
+    console.log(scope)
+})
+const scope = 'global'
+console.log(scope)

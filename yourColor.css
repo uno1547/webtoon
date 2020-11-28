@@ -14,9 +14,11 @@ h2 {
 .input-area {
     position: relative;
     height: 300px;
-    width: 1800px;
+    width: 850px;
     margin: auto;
+    /* border: black solid 1px; */
 }
+
 .input-area div {
     position: absolute;
     font-size: 30px;
@@ -30,39 +32,39 @@ h2 {
 }
 #first {
     top: 28px;
-    left: 810px;
+    left: 326px;
 }
 #second {
     top: 28px;
-    left: 1184px;
+    left: 686px;
 }
 #third {
-    top:200px;
-    left: 1011px;
+    top:198px;
+    left: 575px;
 }
 .input-color1 {
     top: 30px;
-    left: 580px;
+    left: 101px;
 }
-.sum {
-    top: 30px;
-    left: 880px;
+.input-area .sum {
+    top: 19px;
+    left: 395px;
+    font-size: 55px;
 }
 .input-color2 {
     top: 30px;
-    left: 950px;
-
+    left: 457px;
 }
 .input-color3 {
     top: 200px;
-    left: 730px;
+    left: 300px;
 }
 .down {
     position: absolute;
     height: 73px;
     width: 73px;
     top: 100px;
-    left: 850px;
+    left: 372px;
     
 }
 input {
@@ -81,8 +83,111 @@ input {
     color: rgb(199, 183, 183);
 }
 
-.grad div {
+.box {
+    display: none;
+}
+.box div {
     width: 200px;
     height: 10px;
     margin: auto;
+}
+
+.result-page {
+    /* border: black solid 1px; */
+    margin: auto;
+    position: relative;
+    height: 366px;
+    width: 850px;
+}
+
+.result-page div {
+    position: absolute;
+}
+.first-info {
+    width: 300px;
+    height: 150px;
+    /* border: black solid 1px; */
+    top: 20px;
+    left: 50px;
+}
+
+.firstcolor {
+    width: 80px;
+    height: 80px;
+    border: black solid 1px;
+    border-radius: 15px;
+    margin: auto;
+    top: 34px;
+    left: 60px;
+}
+
+.result-page input{
+    width: 67px;
+    height: 69px;
+    font-size: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.first-ratio {
+    width: 75px;
+    height: 75px;
+    /* border: skyblue solid 1px; */
+    border-radius: 15px;
+    top: 34px;
+    left: 163px;
+
+}
+
+.second-info {
+    width: 300px;
+    height: 150px;
+    /* border: black solid 1px; */
+    top: 190px;
+    left: 50px;
+}
+
+.secondcolor {
+    width: 80px;
+    height: 80px;
+    border: black solid 1px;
+    border-radius: 15px;
+    margin: auto;
+    top: 35px;
+    left: 60px;
+}
+
+.second-ratio {
+    width: 75px;
+    height: 75px;
+    /* border: pink solid 1px; */
+    border-radius: 15px;
+    top: 35px;
+    left: 163px;
+}
+
+.color-view{
+    width: 400px;
+    height: 320px;
+    /* border: solid black 1px; */
+    top: 20px;
+    left: 325px;
+}
+
+.your-color{
+    width: 180px;
+    height: 290px;
+    border: black solid 1px;
+    border-radius: 15px;
+    top: 14px;
+    left: 10px;
+}
+
+.result-color{
+    width: 180px;
+    height: 290px;
+    border: black solid 1px;
+    border-radius: 15px;
+    top: 14px;
+    left: 205px;
 }
